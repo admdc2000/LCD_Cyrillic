@@ -13,7 +13,7 @@ void setup() {
 
 void loop() {
   lcd.clear();
-  LCD_Cyrillic::print(lcd, "Привет Мир!", 2, 0); // Print Cyrillic text: X=0, Y=0
+  LCD_Cyrillic::print(lcd, "Привет Мир!", 2, 0); // Print Cyrillic text: X=2, Y=0
   delay(2000);
   
   lcd.clear();
@@ -30,5 +30,9 @@ void loop() {
 
   lcd.clear();
   LCD_Cyrillic::print(lcd, "Новая строка?\nВозврат каретки!"); // Using newline for line break
+  delay(6000);
+
+  lcd.clear();
+  LCD_Cyrillic::print(lcd, "Ш Щ Ъ Ы Ь Э Ю Я!"); // Ш Щ Ъ Ы Ь Э Ю Я!
   delay(6000);
 }

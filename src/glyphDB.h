@@ -217,6 +217,18 @@ const uint8_t glyph_E[8] = {
     0b00000
 };
 
+// Ъ (Cyrillic hard sign)
+const uint8_t glyph_HS[8] = {
+    0b11000, // **   
+    0b11000, // **   
+    0b01000, //  *   
+    0b01110, //  ***  
+    0b01001, //  *  * 
+    0b01001, //  *  * 
+    0b01110, //  ***  
+    0b00000
+};
+
 // ----------------- Glyph DB -----------------
 struct GlyphDBEntry {
     uint16_t code;
@@ -241,7 +253,8 @@ const GlyphDBEntry glyphDB[] = {
     {0x0419, glyph_J},    // Short I (Cyrillic Й)
     {0x042E, glyph_YU},   // Yu (Cyrillic Ю)
     {0x042B, glyph_Y},    // (Cyrillic Ы)
-    {0x042D, glyph_E}     // E (Cyrillic Э)
+    {0x042D, glyph_E},    // E (Cyrillic Э)
+    {0x042A, glyph_HS}    // ' (Cyrillic Ъ)
 };
 
 constexpr size_t GLYPH_DB_SIZE = sizeof(glyphDB) / sizeof(glyphDB[0]);
